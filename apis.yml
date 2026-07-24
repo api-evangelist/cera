@@ -1,0 +1,66 @@
+aid: cera
+url: https://raw.githubusercontent.com/api-evangelist/cera/refs/heads/main/apis.yml
+name: Cera
+kind: company
+description: >-
+  Cera is a United Kingdom-based digital-first home healthcare company, founded in 2016
+  and headquartered in London, that describes itself as Europe's largest provider of
+  in-home care. Cera delivers home care, live-in care, nurse-led and complex care,
+  extra-care housing, supported living, and specialist learning-disability and autism
+  support, all wrapped around a proprietary digital platform that uses data analytics
+  and machine learning so its network of carers can collect, monitor, and react to
+  vital-sign and health-condition changes in real time. Cera positions this technology
+  as a remote-monitoring and predictive layer that surfaces deterioration in health
+  earlier and reduces hospitalisations across its United Kingdom home-care operations.
+  As of this review Cera exposes no public developer portal, no self-serve REST API,
+  and no HL7 FHIR endpoint or CapabilityStatement; its platform is an internal,
+  operator-facing product delivered through consumer and carer mobile apps rather than
+  a documented partner API. This profile is an honest identity-only stub recording the
+  absence of a public API surface for a United Kingdom telehealth-adjacent home-care
+  provider.
+accessModel:
+  pricing: unknown
+  onboarding: none
+  trial: false
+  try_now: false
+  public: false
+  label: No public API
+  confidence: high
+  source:
+  - website
+  generated: '2026-07-24'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- United Kingdom
+- Telehealth
+- Home Care
+- Remote Monitoring
+- Digital Health
+- Elderly Care
+- Machine Learning
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://ceracare.co.uk/
+- type: About
+  url: https://ceracare.co.uk/about-cera
+- type: Services
+  url: https://ceracare.co.uk/our-services
+- type: GitHubOrganization
+  url: https://github.com/ceracare
+- type: LinkedIn
+  url: https://uk.linkedin.com/company/ceracare
+- type: PrivacyPolicy
+  url: https://ceracare.co.uk/privacy-policy
+- type: TermsOfService
+  url: https://ceracare.co.uk/terms-and-conditions
+- type: CookiePolicy
+  url: https://ceracare.co.uk/cookie-policy
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

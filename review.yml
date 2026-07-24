@@ -1,0 +1,108 @@
+aid: cera
+name: Cera
+review:
+  question: Does Cera expose a public developer portal, REST API, or HL7 FHIR surface?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Cera is a United Kingdom digital-first home healthcare provider (home care,
+    live-in care, nurse-led/complex care, supported living) whose value is a
+    proprietary internal digital platform using data analytics and machine
+    learning for real-time vital-sign monitoring by its carers. As of this
+    review Cera publishes NO public developer portal, NO self-serve REST API,
+    and NO HL7 FHIR endpoint or CapabilityStatement. The platform is an
+    internal, operator/carer-facing product delivered via consumer and carer
+    mobile apps, not a documented partner API. This is an honest identity-only
+    stub. No endpoints, specs, or FHIR resources were fabricated.
+  homeMarket: United Kingdom
+  developerPortal:
+    url: ""
+    confirmed: false
+    note: >-
+      No developer portal found. developer.ceracare.co.uk, docs.ceracare.co.uk,
+      api.ceracare.co.uk, and fhir.ceracare.co.uk do not resolve (curl exit /
+      HTTP 000). The main site ceracare.co.uk is a Next.js single-page app that
+      returns HTTP 200 with the same HTML app shell for every path, including
+      /developers, /developer, /api, /interoperability, /openapi.json, and
+      /.well-known/smart-configuration (soft 404s, content-type text/html — not
+      JSON specs). Distinct real pages confirmed by <title>: /our-services,
+      /about-cera, /privacy-policy, /terms-and-conditions, /cookie-policy.
+  fhirCapabilityStatement:
+    captured: false
+    version: null
+    resources: []
+    note: >-
+      No FHIR base URL exists. <host>/metadata and /.well-known/smart-configuration
+      probes returned either non-resolving hosts (HTTP 000) or the SPA HTML shell,
+      never a CapabilityStatement or SMART configuration JSON. UK healthcare FHIR is
+      centralised at NHS England (api.service.nhs.uk); Cera is not a FHIR API vendor.
+  smartOnFhir:
+    captured: false
+    note: /.well-known/smart-configuration returns the SPA HTML shell, not JSON.
+  downloadableSpecs:
+    count: 0
+    provenance: >-
+      Probed /openapi.json, and api.ceracare.co.uk root — no OpenAPI/Swagger
+      served. Every candidate returned the HTML app shell or a non-resolving host.
+  authModel:
+    scheme: none-public
+    note: >-
+      No public authentication scheme is documented — no SMART-on-FHIR, no OAuth2
+      client-credentials, no API key, no mTLS. No /.well-known/openid-configuration
+      is served. Access to Cera's platform is via its own consumer and carer apps.
+  standardsConformance:
+    usCore: false
+    ukCore: false
+    auCore: false
+    daVinci: false
+    carin: false
+    note: >-
+      No published conformance to UK Core or any FHIR IG. Cera's platform is
+      proprietary and internal; it is not a standards-based interoperability API.
+  gatedVsSelfServe: neither-no-public-api
+  github:
+    org: https://github.com/ceracare
+    apiRepos: false
+    note: >-
+      Public repos are infrastructure-as-code and interview exercises
+      (terraform-aws-github-runner, cloud-foundation-fabric fork, fe-exercise,
+      LendingLibraryInterview, ceracare.github.io) — no API/SDK/OpenAPI/FHIR repo.
+transports:
+- protocol: REST
+  scheme: https
+  documented: false
+  note: No documented public REST API.
+- protocol: FHIR
+  scheme: https
+  documented: false
+  note: No FHIR base URL, metadata endpoint, or CapabilityStatement.
+sources:
+- url: https://ceracare.co.uk/
+  type: Website
+  note: HTTP 200. Next.js SPA marketing site; no developer/API links.
+- url: https://ceracare.co.uk/our-services
+  type: Services
+  note: HTTP 200. Six home-care service lines + proprietary digital monitoring platform; no API.
+- url: https://ceracare.co.uk/about-cera
+  type: About
+  note: HTTP 200. Company background; Europe's largest digital-first home healthcare provider.
+- url: https://github.com/ceracare
+  type: GitHubOrganization
+  note: Infra/interview repos only; no API, SDK, OpenAPI, or FHIR repositories.
+- url: https://developer.ceracare.co.uk
+  type: Probe
+  note: HTTP 000 — subdomain does not resolve.
+- url: https://api.ceracare.co.uk
+  type: Probe
+  note: HTTP 000 — subdomain does not resolve.
+- url: https://fhir.ceracare.co.uk
+  type: Probe
+  note: HTTP 000 — subdomain does not resolve.
+- url: https://ceracare.co.uk/openapi.json
+  type: Probe
+  note: HTTP 200 but content-type text/html (SPA shell) — not an OpenAPI document.
+- url: https://ceracare.co.uk/.well-known/smart-configuration
+  type: Probe
+  note: HTTP 200 but content-type text/html (SPA shell) — not a SMART configuration.
