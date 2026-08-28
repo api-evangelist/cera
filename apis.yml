@@ -18,6 +18,17 @@ description: >-
   a documented partner API. This profile is an honest identity-only stub recording the
   absence of a public API surface for a United Kingdom telehealth-adjacent home-care
   provider.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: none
