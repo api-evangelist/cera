@@ -50,7 +50,7 @@ tags:
 - Remote Monitoring
 - Digital Health
 - Elderly Care
-- Machine-Learning
+- Machine Learning
 tags_raw:
 - Healthcare
 - United Kingdom
@@ -60,6 +60,7 @@ tags_raw:
 - Digital Health
 - Elderly Care
 - Machine Learning
+- Machine-Learning
 created: '2026-07-24'
 modified: '2026-07-24'
 specificationVersion: '0.23'
