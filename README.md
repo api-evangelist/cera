@@ -64,20 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Cera is a United Kingdom-based digital-first home healthcare company, founded in 2016 and headquartered in London, that describes itself as Europe's largest provider of in-home care. It delivers home care, live-in care, nurse-led and complex care, extra-care housing, supported living, and specialist learning-disability and autism support, wrapped around a proprietary digital platform that applies data analytics and machine learning so carers can collect, monitor, and react to vital-sign changes in real time.
+Cera is a United Kingdom-based digital-first home healthcare company, founded in 2016 and headquartered in London, that describes itself as Europe's largest provider of in-home care. Cera delivers home care, live-in care, nurse-led and complex care, extra-care housing, supported living, and specialist learning-disability and autism support, all wrapped around a proprietary digital platform that uses data analytics and machine learning so its network of carers can collect, monitor, and react to vital-sign and health-condition changes in real time. Cera positions this technology as a remote-monitoring and predictive layer that surfaces deterioration in health earlier and reduces hospitalisations across its United Kingdom home-care operations. As of this review Cera exposes no public developer portal, no self-serve REST API, and no HL7 FHIR endpoint or CapabilityStatement; its platform is an internal, operator-facing product delivered through consumer and carer mobile apps rather than a documented partner API. This profile is an honest identity-only stub recording the absence of a public API surface for a United Kingdom telehealth-adjacent home-care provider.
 
-## API Posture
+**Areas:** Healthcare · United Kingdom · Telehealth · Home Care · Remote Monitoring · Digital Health · Elderly Care · Machine Learning
 
-As of this review (2026-07-24), Cera exposes **no public developer portal, no self-serve REST API, and no HL7 FHIR endpoint or CapabilityStatement**. The `developer.`, `docs.`, `api.`, and `fhir.` subdomains do not resolve, and the primary site (`ceracare.co.uk`) is a Next.js single-page app that returns the same app shell for `/developers`, `/api`, `/openapi.json`, and `/.well-known/smart-configuration` (soft 404s, no real specs). Cera's GitHub organization ([github.com/ceracare](https://github.com/ceracare)) contains only infrastructure-as-code and interview repositories — no API, SDK, OpenAPI, or FHIR projects.
+## Cera on APIs.io
 
-Cera's platform is an internal, operator-facing product delivered through consumer and carer mobile apps rather than a documented partner API. This profile is an honest identity-only stub recording the absence of a public API surface.
+Everything profiled for Cera is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cera/](https://apis.io/providers/cera/)** — or go straight to one of the APIs or properties below.
 
-## Links
+### Published properties
 
-- Website: https://ceracare.co.uk/
-- About: https://ceracare.co.uk/about-cera
-- Services: https://ceracare.co.uk/our-services
-- GitHub: https://github.com/ceracare
-- LinkedIn: https://uk.linkedin.com/company/ceracare
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Home market: United Kingdom.
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Cera Domain Security](https://apis.io/security/cera/cera-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://ceracare.co.uk/)
+- [Blog](https://ceracare.co.uk/blog)
+- [Terms of service](https://ceracare.co.uk/terms-and-conditions)
+- [Privacy policy](https://ceracare.co.uk/privacy-policy)
+- [GitHub](https://github.com/ceracare)
+
+## API Evangelist rating
+
+**Kin Score 4.5** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cera/](https://apis.io/providers/cera/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cera: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cera/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
